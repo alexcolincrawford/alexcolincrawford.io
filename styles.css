@@ -145,7 +145,7 @@ html {
     .navbar ul {
         flex-direction: column;
         width: 100%;
-        top: 60px;
+        top: 65px;
     }
 
     .navbar li {
@@ -154,6 +154,24 @@ html {
 
     .sub-title {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0px;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        top: 50px;
+    }
+
+    .navbar li {
+        margin: 10px 0;
     }
 }
 
