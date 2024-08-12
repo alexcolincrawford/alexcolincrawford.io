@@ -1,0 +1,158 @@
+<!-- https://portfolio.0xtter.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Crawford</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navbar-menu">
+            <li><a href="#">Home</a></li>
+            <li id="item-2"><a href="about.html">About</a></li>
+            <li id="item-1"><a href="#tp">Projects</a></li>
+            <li id="item-4"><a href="about.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="main">
+        <div class="main-container">
+            <!-- <div class="title">
+                Cybersecurity Graduate
+            </div> -->
+            <div class="sub-title">
+                Alex Crawford.
+            </div>
+            <div class="landing-page-bio">
+                <p>A First Class Cybersecurity graduate driven by innovation and a deep curiosity for the latest in technology and security. Dedicated to solving complex challenges through hands-on projects and continuous learning.</p>          
+            </div>
+
+            <div class="options-container">
+                <button id="o-1" class="option-button">About Me</button>
+            </div>
+
+            <div class="socials">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/alex-crawford-2a88a4254/" id="socials-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/alexcolincrawford" id="socials-github" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-down-container">
+            <div class="scroll-down">
+                Scroll Down
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div id="tp">ㅤ</div>
+        <div>
+            <h4 class="content-subtitle" >Projects</h4>
+        </div>
+
+        <div>
+            <h2 class="content-title">Latest Projects</h2>
+        </div>
+
+        <div class="cyberproject-container">
+            <div class="left-side">
+                <div class="project-container">
+                    <div class="text-container">
+                        <h2>Nessus Vulnerability Analysis</h2>
+                        <p>In the Nessus Vulnerability Analysis project, I concentrated on identifying and addressing security vulnerabilities on a metasploitable machine. Leveraging the Nessus vulnerability scanner, I performed in-depth scans to detect potential weaknesses in the system and developed actionable solutions to remediate them effectively.</p>
+                        <ul class="nessus-ul">
+                            <li><strong>Scanning and Identification:</strong> Implementing Nessus to perform detailed scans of the network, servers, and applications.</li>
+                            <li><strong>Vulnerability Assessment:</strong> Analyzing the scan results to identify critical vulnerabilities, including outdated software, misconfigurations, and potential security risks.</li>
+                            <li><strong>Remediation Strategy:</strong> Developing a prioritized list of vulnerabilities along with actionable recommendations to address and mitigate the identified issues.</li>
+                            <!-- <li><strong>Reporting and Documentation:</strong> Creating detailed reports and documentation to assist in understanding the security posture and compliance with industry standards.</li> -->
+                        </ul>
+                    </div>
+                    <div class="">
+                        <div class="image-container nessus-image"></div>
+                        <p id="click-me"><a href="https://github.com/alexcolincrawford/vulnerability-analysis" target="_blank">Click Here For Full Project</a></p>
+                    </div> 
+                </div>
+
+                <div class="divider">
+                </div>
+
+                <div class="project-container" id="temp">
+                    <div class="text-container">
+                        <h2>Honeypot with Azure Sentinel</h2>
+                        <p>In the Azure Sentinel project, I concentrated on deploying and configuring a custom Azure Sentinel homelab to monitor and analyze security events. Specifically, I set up the homelab to capture and investigate failed Remote Desktop Protocol (RDP) attempts from a device intentionally exposed to potential attackers.</p>
+                        <ul class="nessus-ul">
+                            <li><strong>Hands-On Experience with Azure Sentinel:</strong> Gained practical experience in setting up and configuring Azure Sentinel as a Security Information and Event Management (SIEM) tool.</li>
+                            <li><strong>Log Analytics and Monitoring:</strong> Created and used PowerShell scripts to generate security logs for failed RDP attempts and established a custom log in Azure Log Analytics Workspace to capture and analyze this data.</li>
+                            <li><strong>Visualization and Reporting:</strong> Creating dashboards and visualizations to monitor failed RDP attempts and other security metrics. This provided insights into attack patterns and helped in refining defensive strategies.</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <div class="image-container azure-image"></div>
+                        <p id="click-me"><a href="https://github.com/alexcolincrawford/Azure-Sentinel-SIEM " target="_blank">Click Here For Full Project</a></p>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="right-side">
+                <!-- Content for the right side if needed -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Alex Crawford | <a href="mailto:alexcolincrawford@gmail.com">alexcolincrawford@gmail.com</a></p>
+            <ul class="footer-links">
+                <!--                     <li><a href="https://www.linkedin.com/in/alex-crawford-2a88a4254/" id="socials-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/alexcolincrawford" id="socials-github" target="_blank"><i class="fab fa-github"></i></a></li>
+ -->
+                <li><a href="https://www.linkedin.com/in/alex-crawford-2a88a4254/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/alexcolincrawford" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+        <!-- Progress Bar Container -->
+    <div id="progress-bar-container">
+        <!-- Progress Bar Filler -->
+        <div id="progress-bar"></div>
+    </div>
+
+    <script>
+// JavaScript to update the progress bar
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight;
+        const winHeight = window.innerHeight;
+        const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+        
+        document.getElementById('progress-bar').style.width = scrollPercent + '%';
+    });
+
+    function toggleMenu() {
+        var menu = document.getElementById('navbar-menu');
+        menu.classList.toggle('show');
+    }
+
+    </script>
+</body>
+
+</html>

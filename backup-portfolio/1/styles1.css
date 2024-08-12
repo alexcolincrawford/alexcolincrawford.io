@@ -1,0 +1,347 @@
+* {
+    font-family: "League Spartan";
+    /* border: 1px solid red; */
+}
+
+.navbar {
+    /* border: 1px solid red; */
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Style for the navbar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    /* Adjust this value to bring the navbar down from the top */
+    left: 75%;
+    /* Adjust this value to move the navbar more to the left */
+    margin: 20px;
+    /* Additional spacing from the left side */
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+
+    /* color: rgb(70, 217, 236); */
+    color: rgb(233, 146, 131);
+}
+
+/* #item-2 > a{
+    color: white;
+}
+
+#item-4 > a{
+    color: white;
+} */
+
+.navbar a:hover {
+    /* color: rgb(233, 146, 131); */
+    font-size: 26px;
+    color: white;
+}
+
+/* Main container */
+.main {
+    display: flex;
+    justify-content: flex-start;
+    /* Aligns content to the left horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    margin: 0;
+    /* Ensure no extra margins */
+    padding: 0;
+    /* Ensure no extra padding */
+    /* background-image: url('black-geometric-shapes-4k-geometric-patterns-wavy-backgrounds-3d-figures.jpg'); */
+    /* background-image: url('desktop-wallpaper-dark-night-mountains-minimalist-dark-oled-936523419.jpg'); */
+
+    background-image: url('fusz1.png');
+
+    background-size: 100% 100%;
+    /* Stretches the image to fit the container without cropping */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+}
+
+.main>* {
+    color: white;
+}
+
+/* Container for titles and content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    margin-bottom: 50px;
+    width: 100%;
+    /* Ensures the container takes full width */
+    position: relative;
+    /* Needed for absolute positioning of mini-title if necessary */
+}
+
+/* Title inside main */
+.title {
+    font-size: 34px;
+}
+
+.mini-title {
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 22px;
+    margin-top: 2vh;
+}
+
+.sub-title {
+    display: flex;
+    font-size: 68px;
+    font-weight: bold;
+
+    margin-top: 5.4px;
+
+    color: white;
+    /* color: rgb(70, 217, 236); */
+    /* color: rgb(0, 0, 0); */
+
+    /* text-decoration: underline; */
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    align-items: flex-start;
+    /* Aligns icons to the top of the container */
+    position: absolute;
+    top: 20px;
+    /* Adjust this value to align with .title */
+    right: 20px;
+    /* Positioning from the right edge */
+}
+
+.socials ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.socials li {
+    margin: 7.5px 20px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+    font-size: 44px;
+    /* Adjust the size of the icons here */
+
+}
+
+/* Optional: adjust icon styles */
+#socials-linkedin i,
+#socials-github i {
+    /* You can add additional styling here if needed */
+    color: rgb(233, 146, 131);
+}
+
+#socials-linkedin i:hover,
+#socials-github i:hover {
+    /* You can add additional styling here if needed */
+    color: rgb(255, 255, 255);
+}
+
+.items-container-an {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    position: absolute;
+    /* Use absolute positioning to place it where you want */
+    top: 50%;
+    /* Center it vertically within its container */
+    left: 50%;
+    /* Center it horizontally within its container */
+    transform: translate(-50%, -50%);
+    /* Center it perfectly */
+    width: auto;
+    /* Adjust width as needed */
+}
+
+.items-container-an>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center list items horizontally */
+
+    margin-left: 25rem;
+}
+
+.items-container-an>ul>li {
+    margin: 10px 0;
+    /* Add vertical spacing between list items */
+}
+
+.items-container-an>ul>li>a {
+    text-decoration: none;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    /* Center text within the link */
+}
+
+.scroll-down-container {
+    position: absolute;
+    bottom: 40px;
+    /* Adjust this value to add some spacing from the bottom */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Offset by half its width to center perfectly */
+    text-align: center;
+    /* Center the text within the container */
+    
+    /* border: 1px solid red; */
+
+
+}
+
+.scroll-down {
+    font-size: 18px;
+    /* Adjust the font size as needed */
+    color: rgba(255, 255, 255, 0.616);
+    /* Change the color as needed */
+    font-weight: bold;
+}
+
+.line-container {
+    position: absolute;
+    /* Position it relative to the viewport */
+    top: 85%;
+    /* Start with the vertical center */
+    left: 46%;
+    /* Start with the horizontal center */
+    transform: translate(-71.75%, -60%);
+    /* Center it perfectly */
+    width: 30%;
+    /* Ensure it takes full width to use flexbox centering */
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.line {
+    border: 1px solid rgb(233, 146, 131);
+    /* Line color */
+    width: 50rem;
+    /* Adjust the width as needed */
+    margin-top: 180px;
+    /* Space above the line */
+}
+
+.options-container {
+    /* border: 1px solid red; */
+
+    position: absolute;
+    bottom: 32.5%;
+    left: 50%;
+
+    display: flex;
+    width: 30%;
+
+    transform: translateX(-50%);
+
+    border-top: 3px solid rgb(233, 146, 131);
+}
+
+.options-container > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0 0px; /* Add padding to the left and right */
+
+    width: 100%; /* Make the width responsive */
+
+    justify-content: space-evenly; /* Distribute items evenly */
+
+    margin-top: 50px;
+}
+
+.options-container > ul * {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+#o-1, #o-2, #o-3 {
+    /* background-color: rgb(233, 146, 131);
+    border-radius: 100%;
+
+    padding: 30px 10px; */ */
+
+    /* border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    .options-container > ul * {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .options-container > ul * {
+        font-size: 24px; /* Further adjust font size for very small screens */
+        margin-top: 5px;
+    }
+    .options-container > ul {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: center; /* Center the items */
+    }
+}
+

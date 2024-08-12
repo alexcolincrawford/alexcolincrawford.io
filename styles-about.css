@@ -1,0 +1,87 @@
+* {
+    font-family: "League Spartan";
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('images/fusz1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    position: relative; /* Make this container the reference point for absolute positioning */
+    width: 61vw;
+    height: 90vh;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), /* Stronger shadow */
+                0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    display: flex;
+}
+
+.half-about, .half-contact {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.half-about {
+    background-color: white;
+}
+
+.half-contact {
+    background-color: #f4f4f4; /* Light gray color for contrast */
+}
+
+.half-contact-content {
+    border: 1px solid red;
+}
+
+/* Styling for the content within each half */
+.half-about-content h2, .half-contact-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.half-about-content h5, .half-contact-content h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.half-about-content, .half-contact-content {
+    max-width: 80%;
+}
+
+/* X Button Styling */
+.x-button {
+    position: absolute;
+    top: 10px; /* Adjust to move the button closer or further from the top */
+    right: 10px; /* Adjust to move the button closer or further from the right */
+
+    border: solid 1px red;
+    padding: 10px 20px;
+}
+.x-button button {
+    background-color: transparent; /* Transparent background */
+    color: black; /* Button text color */
+    border: none; /* Remove default button borders */
+    font-size: 24px; /* Size of the 'X' */
+    font-weight: bold; /* Make the 'X' bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.x-button button:hover {
+    color: red; /* Change color on hover */
+}
