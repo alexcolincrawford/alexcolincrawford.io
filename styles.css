@@ -129,6 +129,10 @@ html {
     .hamburger-menu {
         display: flex;
     }
+
+    .sub-title {
+        margin-top: 10px;
+    }
 }
 
 /* Media Query for screens 480px or smaller */
@@ -145,6 +149,10 @@ html {
 
     .navbar li {
         margin: 10px 0;
+    }
+
+    .sub-title {
+        margin-top: 10px;
     }
 }
 
