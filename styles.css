@@ -467,7 +467,7 @@ html {
 
 .scroll-down {
     font-size: 16px;
-    color: rgba(68, 64, 64, 0.438); /* Default color */
+    color: rgba(68, 64, 64, 0.1); /* Initial color */
     font-weight: bold;
     letter-spacing: 2px;
 }
