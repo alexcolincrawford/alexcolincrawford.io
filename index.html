@@ -119,7 +119,7 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>Alex Crawford | <a href="mailto:alexcolincrawford@gmail.com">alexcolincrawford@gmail.com</a></p>
+            <p>Made By Alex Crawford | <a href="mailto:alexcolincrawford@gmail.com">alexcolincrawford@gmail.com</a></p>
             <ul class="footer-links">
                 <!--                     <li><a href="https://www.linkedin.com/in/alex-crawford-2a88a4254/" id="socials-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="https://github.com/alexcolincrawford" id="socials-github" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -148,9 +148,12 @@
     });
 
     function toggleMenu() {
-        var menu = document.getElementById('navbar-menu');
-        menu.classList.toggle('show');
-    }
+        const navbarMenu = document.getElementById('navbar-menu');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        navbarMenu.classList.toggle('show');
+        hamburgerMenu.classList.toggle('active');
+    }   
+
 
     document.getElementById('o-1').addEventListener('click', function() {
         window.location.href = 'about.html'; /* About Button Click Event*/
