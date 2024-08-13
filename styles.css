@@ -17,6 +17,20 @@ html {
 
 }
 
+:root {
+    --background-color: #f5f5f5;
+    --base-colour: rgb(233, 146, 131);
+    --accent-colour:  #333;
+    --text-colour: rgb(68, 64, 64);
+}
+
+.darkmode {
+    --background-color: #2e2e2e;
+    --base-colour: rgb(233, 146, 131);
+    --accent-colour:  #f5f5f5;
+    --text-colour: #fff;
+}
+
 /* Navigation Styling */
 .navbar {
     position: fixed;
@@ -26,16 +40,13 @@ html {
     margin: 0;
     padding: 10px 17.5px;
     display: flex;
-    justify-content: center;
     align-items: center;
     z-index: 1000; /*Priority*/
     border-radius: 8px;
-    color: white;
     transition: padding 0.3s;
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px); /* Safari */
-
 }
 
 .navbar ul {
@@ -45,6 +56,7 @@ html {
     display: flex;
     flex-direction: row;
     padding: 10px;
+
 }
 
 .navbar li {
@@ -53,17 +65,17 @@ html {
 
 .navbar a {
     text-decoration: none;
-    color: rgb(233, 146, 131);
+    color: var(--base-colour);
     font-weight: bold;
     font-size: 2.115em;
 }
 
 .navbar a:hover {
     font-size: 2.2115rem;
-    color: #242323;
+    color: var(--accent-colour);
     transition: font-size 0.3s linear;
     text-decoration: none;
-    border-bottom: 3px solid #f5f5f5;
+    border-bottom: 3px solid var(--background-color);
 }
 
 .hamburger-menu {
@@ -78,12 +90,69 @@ html {
 .hamburger-menu div {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: var(--accent-colour);
     margin: 6px 0;
     transition: 0.3s;
 }
 
+/* Navbar styles */
+#navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 
+    /* border: 1px solid red; */
+}
+
+#theme-switch {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px; /* Default top positioning */
+    right: 20px; /* Default right positioning */
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-colour);
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+#theme-switch svg {
+    font-size: 1.5em; /* Adjust icon size */
+    transition: color 0.3s;
+    fill: #333;
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+/* Change color on hover */
+#theme-switch svg:hover {
+    color: var(--accent-colour); /* Hover color */
+    font-size: 1.65em;
+    transition: font-size 0.3s ease-in-out;
+
+}
+
+/* Change color when dark mode is active */
+#theme-switch svg.dark-mode-icon {
+    color: var(--accent-colour); /* Color when clicked */
+}
+
+#theme-switch svg.dark-mode-icon:hover {
+    color: #ffcc00; /* Color when clicked */
+}
 
 @media (max-width: 768px) {
     .navbar {
@@ -94,24 +163,22 @@ html {
     }
 
     .navbar ul {
-        max-height: 0;  /* Start with the menu hidden */
-        overflow: hidden;  /* Hide overflowing content */
+        max-height: 0; /* Start with the menu hidden */
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 20px;
         max-width: 140px;
-
         margin: 0;
         position: absolute;
-        top: 40px; /* Aligns with the top of the navbar */
-        left: 60px; /* Positions the menu beside the hamburger */
+        top: 40px; /* Align with the top of the navbar */
+        left: 60px; /* Position the menu beside the hamburger */
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        background-color: rgba(233, 146, 131, 0.9); /* Add background color for better visibility */
         width: auto; /* Ensure the menu has minimal width */
         border-radius: 15%;
         opacity: 0;
         transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 999; /* Ensure it is below the theme switch */
     }
 
     .navbar ul.show {
@@ -125,7 +192,7 @@ html {
 
     .navbar a {
         font-size: 1.6em;
-        color: #333;
+        color: var(--accent-colour);
     }
 
     .navbar a:hover {
@@ -143,7 +210,7 @@ html {
     .hamburger-menu div {
         width: 25px;
         height: 3px;
-        background-color: #333;
+        background-color: var(--accent-colour);
         margin: 4px 0;
         transition: 0.3s;
     }
@@ -152,36 +219,43 @@ html {
         opacity: 0.8; /* Slightly fade the icon */
         transform: scale(1.1); /* Slightly increase the size */
     }
-    
+
+    /* Adjust the position of the theme switch button on smaller screens */
+    #theme-switch {
+        position: fixed; /* Change to fixed positioning to ensure visibility */
+        margin: 0;
+        padding: 0;
+        top: -3vh;
+        left: 75vw;
+    }
 }
 
 /* Media Query for screens 480px or smaller */
 @media (max-width: 480px) {
     .navbar {
-        padding: 10px;
-        justify-content: space-between;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
     }
 
     .navbar ul {
-        display: none; /* Start hidden */
+        max-height: 0; /* Start with the menu hidden */
         flex-direction: column;
-        width: auto; /* Ensure full width */
-        top: 50px; /* Align with the hamburger menu */
-        left: 0; /* Align with the left edge */
-        padding: 15px; /* Adjust padding for better spacing */
-        margin-left: 50px;
+        align-items: flex-start;
+        padding: 10px 20px;
+        max-width: 140px;
+        margin: 0;
         position: absolute;
+        top: 40px; /* Align with the top of the navbar */
+        left: 60px; /* Position the menu beside the hamburger */
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        background-color: rgba(233, 146, 131, 0.9); /* Ensure visibility */
+        width: auto; /* Ensure the menu has minimal width */
         border-radius: 15%;
-        max-height: 200px; /* Restrict maximum height */
-        overflow-y: auto; /* Allow scrolling if content overflows */
-        transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-        opacity: 0; /* Start hidden */
-        z-index: 1000; /* Ensure it's on top */
-
-        max-width: 115px;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 999; /* Ensure it is below the theme switch */
     }
 
     .navbar ul.show {
@@ -197,33 +271,43 @@ html {
     .sub-title {
         margin-top: 20px;
     }
+
+    #theme-switch {
+        position: absolute; /* Change to fixed positioning to ensure visibility */
+        margin: 0;
+        padding: 0;
+        top: -3vh;
+        left: 65vw;
+    }
 }
 
 
 /* Media Query for screens 360px or smaller */
 @media (max-width: 360px) {
     .navbar {
-        padding: 5px 5px;
-        justify-content: space-between;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
     }
 
     .navbar ul {
-        display: none; /* Start hidden */
+        max-height: 0; /* Start with the menu hidden */
         flex-direction: column;
-        width: auto;
-        top: 40px; /* Align with the hamburger menu */
-        padding: 10px; /* Adjust padding to be more reasonable */
+        align-items: flex-start;
+        padding: 10px 20px;
+        max-width: 140px;
         margin: 0;
         position: absolute;
-        left: 0;
+        top: 40px; /* Align with the top of the navbar */
+        left: 60px; /* Position the menu beside the hamburger */
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        background-color: rgba(233, 146, 131, 0.9); /* Ensure visibility */
+        width: auto; /* Ensure the menu has minimal width */
         border-radius: 15%;
-        max-height: 150px; /* Further reduce size for very small screens */
-        overflow-y: auto; /* Allow scrolling if content overflows */
-        transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-        opacity: 0; /* Start hidden */
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 999; /* Ensure it is below the theme switch */
     }
 
     .navbar ul.show {
@@ -234,6 +318,14 @@ html {
 
     .navbar li {
         margin: px 0; /* Adjust margins for better spacing */
+    }
+
+    #theme-switch {
+        position: absolute; /* Change to fixed positioning to ensure visibility */
+        margin: 0;
+        padding: 0;
+        top: -3vh;
+        left: 55vw;
     }
 }
 
@@ -255,7 +347,7 @@ html {
     width: 100vw;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -270,7 +362,7 @@ html {
     width: 100%;
     position: relative;
 
-    color: rgb(68, 64, 64);
+    color: var(--text-colour);
 }
 
 /* Mini title styles */
@@ -288,7 +380,7 @@ html {
     font-size: 5.115em;
     font-weight: bold;
     margin-top: 5.4px;
-    color: rgb(68, 64, 64);
+    color: var(--text-colour);
 
     transition: font-size 0.3s ease-in-out;
 }
@@ -420,12 +512,12 @@ html {
 
 #socials-linkedin i,
 #socials-github i {
-    color: #333;
+    color: var(--accent-colour);
 }
 
 #socials-linkedin i:hover,
 #socials-github i:hover {
-    color: rgb(233, 146, 131);
+    color: var(--accent-colour);
 }
 
 /* Adjust layout for smaller screens */
@@ -496,8 +588,8 @@ html {
 }
 
 .option-button {
-    background-color: rgb(233, 146, 131);
-    color: #333;
+    background-color: var(--base-colour);
+    color: var(--text-colour);
     padding: 13.55px 28px;
     font-weight: bold;
     border: none;
@@ -512,8 +604,8 @@ html {
 }
 
 .option-button:hover {
-    background-color: #333;
-    color: rgb(233, 146, 131);
+    background-color: var(--accent-colour);
+    color: var(--background-color);
 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -746,4 +838,3 @@ html {
     width: 0;
     transition: width 0.2s ease;
 }
-
