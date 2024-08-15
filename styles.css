@@ -432,6 +432,18 @@ html {
     }
 }
 
+@media (max-height: 560px) {
+    .sub-title {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 343px) {
+    .sub-title {
+        margin-top: 100px;
+    }
+}
+
 .landing-page-bio>p {
     font-size: 1.35em;
     line-height: 1.05;
