@@ -419,6 +419,7 @@ html {
 
     .sub-title {
         font-size: 3.5em;
+        margin-top: 25px;
     }
 
     .title {
@@ -426,21 +427,15 @@ html {
     }
 }
 
-@media (max-width: 480px) {
-    .sub-title {
-        margin-top: 25px;
-    }
-}
-
 @media (max-height: 560px) {
     .sub-title {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 }
 
 @media (max-width: 343px) {
     .sub-title {
-        margin-top: 100px;
+        margin-top: 90px;
     }
 }
 
