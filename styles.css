@@ -429,13 +429,13 @@ html {
 
 @media (max-height: 560px) {
     .sub-title {
-        margin-top: 60px;
+        margin-top: 80px;
     }
 }
 
 @media (max-width: 343px) {
     .sub-title {
-        margin-top: 70px;
+        margin-top: 90px;
     }
 }
 
