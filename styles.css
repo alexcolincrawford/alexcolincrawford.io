@@ -401,6 +401,7 @@ html {
 
     .sub-title {
         font-size: 4em;
+        margin-top: 20px; /* Increased margin-top to prevent overlap */
     }
 
     .title {
@@ -419,7 +420,7 @@ html {
 
     .sub-title {
         font-size: 3.5em;
-        margin-top: 25px;
+        margin-top: 30px; /* Further increased margin-top for smaller screens */
     }
 
     .title {
@@ -427,15 +428,20 @@ html {
     }
 }
 
-@media (max-height: 560px) {
+@media (max-width: 343px) {
     .sub-title {
-        margin-top: 100px;
+        font-size: 3em; /* Reduced font-size for very small screens */
+        margin-top: 40px; /* Ensure it stays clear of the navbar */
+    }
+
+    .title {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 343px) {
+@media (max-height: 560px) {
     .sub-title {
-        margin-top: 90px;
+        margin-top: 122px; /* Rule to ensure no overlap when opened in apps like linkedin */
     }
 }
 
