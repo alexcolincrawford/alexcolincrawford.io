@@ -1,0 +1,331 @@
+* {
+    font-family: "League Spartan";
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color); /* Apply background color to body */
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1; /* This will make the main content take up the available space */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px 17.5px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; 
+    border-radius: 8px;
+    transition: padding 0.3s;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--base-colour);
+    font-weight: bold;
+    font-size: 2.115em;
+}
+
+.navbar a:hover {
+    font-size: 2.2115rem;
+    color: var(--accent-colour);
+    transition: font-size 0.3s linear;
+    text-decoration: none;
+    border-bottom: 3px solid var(--background-color);
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    margin: 1vh;
+    margin-left: 2vw;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-colour);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+#navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+
+#theme-switch {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px; 
+    right: 20px; 
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-colour);
+    z-index: 1000; 
+}
+
+#theme-switch svg {
+    font-size: 1.5em; 
+    transition: color 0.3s;
+    fill: #333;
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+#theme-switch svg:hover {
+    color: var(--accent-colour); 
+    font-size: 1.65em;
+    transition: font-size 0.3s ease-in-out;
+
+}
+
+#theme-switch svg.dark-mode-icon {
+    color: var(--accent-colour); 
+}
+
+#theme-switch svg.dark-mode-icon:hover {
+    color: #ffcc00; 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    #theme-switch {
+        position: fixed; 
+        top: 20px; 
+        right: 20px; 
+        opacity: 1; 
+        z-index: 10000; 
+    }
+
+    .navbar ul {
+        max-height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        max-width: 140px;
+        margin: 0;
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        width: auto;
+        border-radius: 15%;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 9999; 
+    }
+
+    .navbar ul.show {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .navbar li {
+        margin: 6px;
+    }
+
+    .navbar a {
+        font-size: 1.6em;
+        color: var(--accent-colour);
+    }
+
+    .navbar a:hover {
+        font-size: 1.7em;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s linear;
+    }
+
+    .hamburger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--accent-colour);
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+
+    .hamburger-menu:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar ul {
+        max-height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        max-width: 140px;
+        margin: 0;
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        width: auto;
+        border-radius: 15%;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar ul.show {
+        display: flex;
+        max-height: 200px;
+        opacity: 1;
+    }
+
+    .navbar li {
+        margin: 8px 0;
+    }
+
+    .sub-title {
+        margin-top: 20px;
+    }
+
+    #theme-switch {
+        position: fixed; 
+        top: 10px; 
+        right: 10px; 
+        z-index: 10000; 
+        opacity: 1; 
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar ul {
+        max-height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        max-width: 140px;
+        margin: 0;
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        width: auto;
+        border-radius: 15%;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar ul.show {
+        display: flex;
+        max-height: 150px;
+        opacity: 1;
+    }
+
+    .navbar li {
+        margin: 6px 0; 
+    }
+
+    #theme-switch {
+        position: fixed; 
+        top: 10px; 
+        right: 10px; 
+        z-index: 10000; 
+        opacity: 1; 
+    }
+}
+
+
+#progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #eeecec6c;
+    z-index: 1000;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: rgb(233, 146, 131);
+    width: 0;
+    transition: width 0.2s ease;
+}

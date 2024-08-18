@@ -783,25 +783,6 @@ html {
     text-decoration: underline;
 }
 
-#id {
-    margin-bottom: 200px;
-    width: 0.1vh;
-}
-
-#click-me {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 16px;
-}
-
-#click-me a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-#click-me a:hover {
-    text-decoration: underline;
-}
 
 #progress-bar-container {
     position: fixed;
