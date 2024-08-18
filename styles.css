@@ -806,6 +806,7 @@ html {
 
 #click-me {
     margin-top: 1.5rem; /* Adjust top margin to create space above */
+
     text-align: center; /* Center-align the text */
     font-size: 1.2em; /* Increase the font size for better visibility */
     color: var(--accent-colour); /* Use your accent color for the text */
@@ -818,6 +819,27 @@ html {
 }
 
 #click-me a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: var(--base-colour); /* Change color on hover for better contrast */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and text decoration */
+}
+
+#click-me1 {
+    margin-top: 1.5rem; /* Adjust top margin to create space above */
+    margin-bottom: 1.5rem; /* Adjust top margin to create space above */
+
+    text-align: center; /* Center-align the text */
+    font-size: 1.2em; /* Increase the font size for better visibility */
+    color: var(--accent-colour); /* Use your accent color for the text */
+}
+
+#click-me1 a {
+    text-decoration: none; /* Remove underline from the link */
+    color: var(--accent-colour); /* Use your accent color for the link */
+    font-weight: bold; /* Make the link text bold */
+}
+
+#click-me1 a:hover {
     text-decoration: underline; /* Add underline on hover */
     color: var(--base-colour); /* Change color on hover for better contrast */
     transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and text decoration */
