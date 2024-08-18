@@ -11,13 +11,13 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--background-color); /* Apply background color to body */
     scroll-behavior: smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
 }
 
 .main {
