@@ -39,7 +39,7 @@
 }
 
 .about-image {
-    background-image: url(images/1715035318253.jpg);
+    background-image: url(images/image1.jpg);
     background-size: cover;
     background-position: center;
     width: 25vw;
@@ -48,6 +48,9 @@
     max-height: 300px;
     border-radius: 50%;
     margin-right: 2vw;
+
+    transform: scale(1.1);
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
@@ -199,6 +202,14 @@
 
     .main-container {
         width: 80vw;
+    }
+
+    .about-image {
+        transform: scale(1.6);
+    }
+
+    .about-text {
+        margin-top: 30px;
     }
 
     .about-text > h1 {
